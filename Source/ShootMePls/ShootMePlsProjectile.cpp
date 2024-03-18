@@ -36,8 +36,8 @@ void AShootMePlsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
-		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
+		OtherComp->AddImpulseAtLocation(GetVelocity() * 1000.0f, GetActorLocation());
 
-		Destroy();
+		// Destroy();
 	}
 }

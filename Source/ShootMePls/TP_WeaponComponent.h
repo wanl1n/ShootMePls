@@ -15,7 +15,7 @@ class SHOOTMEPLS_API UTP_WeaponComponent : public USkeletalMeshComponent
 
 public:
 	/** Projectile class to spawn */
-	UPROPERTY(EditDefaultsOnly, Category=Projectile)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Projectile)
 	TSubclassOf<class AShootMePlsProjectile> ProjectileClass;
 
 	/** Sound to play each time we fire */
