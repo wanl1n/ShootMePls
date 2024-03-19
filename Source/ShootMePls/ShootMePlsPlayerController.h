@@ -23,6 +23,8 @@ protected:
 	UInputMappingContext* InputMappingContext;
 
 	// Begin Actor interface
+	UPROPERTY(BlueprintReadWrite) FVector2D crosshairScreenLoc;
+
 protected:
 
 	virtual void BeginPlay() override;
