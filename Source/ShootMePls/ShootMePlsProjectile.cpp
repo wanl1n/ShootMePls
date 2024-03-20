@@ -27,8 +27,8 @@ AShootMePlsProjectile::AShootMePlsProjectile()
 	ProjectileMovement->bRotationFollowsVelocity = true;
 	ProjectileMovement->bShouldBounce = true;
 
-	// Die after 3 seconds by default
-	InitialLifeSpan = 3.0f;
+	// Don't die!
+	InitialLifeSpan = 0.0f;
 }
 
 void AShootMePlsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
@@ -36,7 +36,7 @@ void AShootMePlsProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
-		OtherComp->AddImpulseAtLocation(GetVelocity() * 1000.0f, GetActorLocation());
+		OtherComp->AddImpulseAtLocation(GetVelocity() * 500.0f, GetActorLocation());
 
 		// Destroy();
 	}

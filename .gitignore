@@ -1,5 +1,13 @@
 # Visual Studio 2015 user specific files
 .vs/
+/.git
+/.vscode
+/Content
+/DerivedDataCache
+/Intermediate
+/Saved
+.ignore
+*.code-workspace
 
 # Compiled Object files
 *.slo
@@ -72,3 +80,5 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+ShootMePls.code-workspace
