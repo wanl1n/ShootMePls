@@ -8,12 +8,17 @@
 
 class AShootMePlsCharacter;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnShoot, AShootMePlsCharacter*, ShootCharacter);
+
 UCLASS(Blueprintable, BlueprintType, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SHOOTMEPLS_API UTP_WeaponComponent : public USkeletalMeshComponent
 {
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(BlueprintAssignable, Category = "Interaction")
+	FOnShoot OnShoot;
+
 	/** Projectile class to spawn */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Projectile)
 	TSubclassOf<class AShootMePlsProjectile> ProjectileClass;

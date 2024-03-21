@@ -22,7 +22,7 @@ void UTP_PickUpComponent::OnSphereBeginOverlap(UPrimitiveComponent* OverlappedCo
 	AShootMePlsCharacter* Character = Cast<AShootMePlsCharacter>(OtherActor);
 	if(Character != nullptr)
 	{
-		UE_LOG(LogTemp, Display, TEXT("what the fuckis going ON!!!"));
+		// UE_LOG(LogTemp, Display, TEXT("what the fuckis going ON!!!"));
 
 		// Notify that the actor is being picked up
 		OnPickUp.Broadcast(Character);
