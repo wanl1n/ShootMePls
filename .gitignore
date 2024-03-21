@@ -2,7 +2,10 @@
 .vs/
 /.git
 /.vscode
-
+/Content
+/DerivedDataCache
+/Intermediate
+/Saved
 .ignore
 *.code-workspace
 
